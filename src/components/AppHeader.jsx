@@ -6,7 +6,8 @@ import BudgetContext from "../contexts/BudgetContext.jsx";
 
 export default function AppHeader() {
 
-    const { budgetMode, setBudgetMode, toggleBudgetMode } = useContext(BudgetContext)
+    // const { budgetMode, setBudgetMode, toggleBudgetMode } = useContext(BudgetContext)
+    const {maxPrice, setMaxPrice} = useContext(BudgetContext)
 
     return (
 
@@ -21,9 +22,10 @@ export default function AppHeader() {
                 </div>
 
                 <ul className="d-flex">
-                    <li><button onClick={toggleBudgetMode} className={budgetMode ? 'active-budget' : ''}>
+                    {/* <li><button onClick={toggleBudgetMode} className={budgetMode ? 'active-budget' : ''}>
                         {`${budgetMode === true ? 'DISATTIVA' : 'ATTIVA'} MODALITÁ BUDGET`}
-                    </button></li>
+                    </button></li> */}
+                    <input type="text" value={maxPrice} onChange={(e) => setMaxPrice(e.target.value)} placeholder="filter product by price..." />
                     {
                         menu.map((item) => (
                             <li key={item.id}>

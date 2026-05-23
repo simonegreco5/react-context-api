@@ -16,7 +16,10 @@ export default function ProductsPage() {
     const [isDataLoading, setIsDataLoading] = useState(false)
 
     // recuperiamo budgetMode usando il context
-    const { budgetMode } = useContext(BudgetContext)
+    // const { budgetMode } = useContext(BudgetContext)
+
+    // recuperiamo maxPrice usando ul context
+    const { maxPrice } = useContext(BudgetContext)
 
     function fetchData(url) {
 
@@ -51,15 +54,27 @@ export default function ProductsPage() {
     // nuovi dati dall'API
 
     // filtro budgetMode, cliccando il button e attivando il budgetMode, mostriamo solo i prodotti con price <= 30, altrimenti li mostriamo tutti
+    // useEffect(() => {
+    //     if (budgetMode) {
+    //         const result = productsData.filter((product) => product.price <= 30)
+
+    //         setFilteredProduct(result)
+    //     } else {
+    //         setFilteredProduct(productsData)
+    //     }
+    // }, [budgetMode])
+
+    // filtro maxPrice, mostriamo solo i prodotti con la fascia di prezzo indicata dall'utente nell'imput situato in AppHeader
     useEffect(() => {
-        if (budgetMode) {
-            const result = productsData.filter((product) => product.price <= 30)
+        if (maxPrice) {
+            const result = productsData.filter((product) => product.price <= Number(maxPrice))
 
             setFilteredProduct(result)
         } else {
+            
             setFilteredProduct(productsData)
         }
-    }, [budgetMode])
+    }, [maxPrice])
 
     return (
         <>

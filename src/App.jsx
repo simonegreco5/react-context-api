@@ -11,26 +11,28 @@ import BudgetContext from "./contexts/BudgetContext"
 
 function App() {
 
-  const [budgetMode, setBudgetMode] = useState(false)
+  // const [budgetMode, setBudgetMode] = useState(false)
+  const [maxPrice, setMaxPrice] = useState("")
 
-  function toggleBudgetMode() {
+  // function toggleBudgetMode() {
 
-    if (budgetMode === false) {
-      setBudgetMode(true)
-      console.log('modalità budget attivata')
+  //   if (budgetMode === false) {
+  //     setBudgetMode(true)
+  //     console.log('modalità budget attivata')
 
-    } else {
-      setBudgetMode(false)
-      console.log('modalità budget disattivata')
-    }
+  //   } else {
+  //     setBudgetMode(false)
+  //     console.log('modalità budget disattivata')
+  //   }
 
-    // oppure semplicemente neghiamo lo stato precedente
-    // setBudgetMode(prev => !prev)
-  }
+  //   // oppure semplicemente neghiamo lo stato precedente
+  //   // setBudgetMode(prev => !prev)
+  // }
 
   return (
     <>
-      <BudgetContext.Provider value={{ budgetMode, setBudgetMode, toggleBudgetMode }}>
+      {/* prima il value di BudgetContext.Provider era value={{ budgetMode, setBudgetMode, toggleBudgetMode }} */}
+      <BudgetContext.Provider value={{ maxPrice, setMaxPrice }}>
         <BrowserRouter>
           <Routes>
             <Route element={<DefaultLayout />}>

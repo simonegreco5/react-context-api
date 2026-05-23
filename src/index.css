@@ -50,6 +50,12 @@ header {
     padding-right: 1rem;
     align-items: center;
 
+    input{
+      border-radius: 0.5rem;
+      border: 2.5px solid black;
+      background-color: rgb(204, 226, 250);
+    }
+
     li {
       padding-left: 2rem;
       list-style: none;
