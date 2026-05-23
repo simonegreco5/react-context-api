@@ -1,0 +1,227 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Bebas Neue', sans-serif;
+}
+
+body {
+  font-family: 'Open Sans Variable', sans-serif;
+}
+
+header {
+  background-color: rgb(8, 117, 235);
+  padding: 1.4rem;
+  color: black;
+  /* header sempre visibile durante lo scorrimento */
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+
+
+  div {
+    padding-left: 1rem;
+    align-items: center;
+
+    h3 {
+      /* color: rgb(8, 117, 235); */
+      color: white;
+      font-size: 1.9rem;
+      padding-top: 0.6rem;
+    }
+
+    .bi-tux {
+      font-size: 2.5rem;
+    }
+
+    .bi-box-seam-fill {
+      color: rgb(151, 78, 9);
+      font-size: 1.5rem;
+      transform: rotate(45deg);
+      padding-left: 0.2rem;
+    }
+  }
+
+  ul {
+
+    padding-top: 0.9rem;
+    padding-right: 1rem;
+
+    li {
+      padding-left: 2rem;
+      list-style: none;
+
+      a {
+        color: rgba(0, 0, 0, 0.84);
+        text-decoration: none;
+        font-weight: 700;
+      }
+
+      a.active::after {
+        content: "";
+        display: block;
+        border-bottom: 2px solid white;
+        width: 100%;
+      }
+    }
+  }
+
+
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(8, 117, 235);
+  color: white;
+
+  div {
+    padding: 1.5rem;
+    margin: auto;
+
+    h4 {
+      padding-left: 2rem;
+    }
+
+    li {
+      list-style: none;
+
+
+
+      a {
+        color: rgba(255, 255, 255, 0.741);
+        text-decoration: none;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+main {
+  padding: 5rem;
+  /* siccome rendiamo header sempre visibile con z-index,
+  diamo un po di padding-top, altrimenti il main parte sotto l'header */
+  padding-top: 10rem;
+
+  #title_jumbotron {
+
+    h1 {
+      padding-top: 0.5rem;
+      color: rgb(8, 117, 235);
+      font-size: 3REM;
+    }
+  }
+
+  #home_main {
+    position: relative;
+  }
+
+  #about_main {
+
+    h1,
+    h2 {
+      color: rgb(8, 117, 235);
+    }
+  }
+
+  #products_main {
+    position: relative;
+
+  }
+
+  #product_page {
+    padding: 5rem;
+  }
+
+  .error-badge {
+    font-size: 4.5rem;
+  }
+
+  .dinamic-cart {
+    position: sticky;
+    top: 80%;
+    left: 92%;
+    font-size: 2.5rem;
+    z-index: 999;
+    background-color: rgba(8, 118, 235, 0.669);
+    padding: 0.5rem;
+    width: 4rem;
+    border: none;
+    border-radius: 1rem;
+
+    span {
+      position: absolute;
+      display: block;
+      font-size: 16px;
+      padding: 0.3rem;
+      background-color: rgb(216, 10, 10);
+      border-radius: 1rem;
+      width: 2rem;
+      color: white;
+      top: -15%;
+      left: 65%;
+    }
+  }
+
+  .button-view {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    text-align: center;
+    padding: 0.45rem;
+    border-radius: 0.4rem;
+    margin-top: 1rem;
+    background-color: rgba(174, 188, 196, 0.544);
+  }
+
+  .button-home {
+    border-radius: 1rem;
+  }
+
+  .logo_tux {
+
+    i {
+      position: absolute;
+      font-size: 30rem;
+      top: -7%;
+      left: 65%;
+    }
+  }
+
+  .card {
+    position: relative;
+    background-color: rgba(8, 118, 235, 0.146);
+
+    .badge {
+      background-color: rgb(216, 10, 10);
+      border-radius: 0rem;
+      width: 6rem;
+      padding: 0.2rem;
+      font-size: 1rem;
+      position: absolute;
+      top: 2%;
+      right: 3%;
+    }
+
+    img {
+      padding: 1rem;
+      height: 15rem;
+      object-fit: contain;
+    }
+
+    p {
+      font-size: 10px;
+    }
+
+    span {
+      padding-left: 1rem;
+
+      .bi-star-fill,
+      .bi-star-half {
+        color: rgb(238, 202, 24);
+      }
+    }
+  }
+
+}
